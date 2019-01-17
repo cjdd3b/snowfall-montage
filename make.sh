@@ -4,6 +4,7 @@ mkdir -p tmp && \
 cd ./raw &&
 
 for i in *.tif; do
+  year=${i:31:4}
 
   # Project the images to Albers
   gdalwarp -q -t_srs "EPSG:102003" -srcnodata "-99999" $i ../tmp/proj_$i;
@@ -20,8 +21,17 @@ for i in *.tif; do
   # Combine hillshade and color relief
   convert ../tmp/shadedrelief_$i ../tmp/gamma_$i -compose Overlay -composite ../tmp/colored_$i;
 
-  # Turn into gifs
-  convert ../tmp/colored_$i -resize 50% ../tmp/$i.gif;
+  # Turn into gifs; add year label
+  convert ../tmp/colored_$i \
+  -resize 50% \
+  -font Helvetica-Bold \
+      -size 165x70 \
+      -pointsize 28 \
+      -fill '#686868' \
+      -weight 1000 \
+      -gravity North \
+      -annotate +0+30 $year \
+  ../tmp/$i.gif;
   rm ../tmp/colored_$i;
 
   # Cleanup

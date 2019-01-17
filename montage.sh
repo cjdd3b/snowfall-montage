@@ -14,7 +14,7 @@ declare -a months=( \
 
 cd tmp &&
 
-for i in `seq -f "%04g" 3 100`;
+for i in `seq -f "%04g" 3 106`;
 do
   echo $i
 
@@ -47,7 +47,6 @@ do
   $i-$month_raw$day_raw-montage.gif
 done   
 
-# echo "Converting to animated gif ..." && \
-# convert -delay 10 -loop 0 ./*-montage.gif ./animated-national.gif && \
-
-# rm ./*-montage.gif
+echo "Converting to animated gif ..." && \
+convert -delay 10 -loop 0 ./*-montage.gif ./animated-national.gif && \
+rm ./*-montage.gif

@@ -1,12 +1,12 @@
 from datetime import timedelta, date
-import urllib
+import urllib, os
 
 ########## GLOBALS ##########
 
 START_YEAR = 2013
 END_YEAR = 2018
 END_MONTH = 1 # January
-END_DAY = 10 # Tenth, which is today-ish
+END_DAY = 17 # 17th, which is today-ish
 
 ########## HELPER FUNCTIONS #########
 
@@ -28,8 +28,16 @@ if __name__ == '__main__':
             file_to_get = "sfav2_CONUS_" + str(year) + "093012_to_{}12.tif".format(single_date.strftime("%Y%m%d"))
             url = "http://www.nohrsc.noaa.gov/snowfall/data/{}/".format(single_date.strftime("%Y%m")) + file_to_get
 
-            # Get URLs
-            print url
+            # Create output filename
             pad = format(n, '04')
-            urllib.urlretrieve (url, "./raw/{}-{}".format(pad, file_to_get))
+            outfile = "./raw/{}-{}".format(pad, file_to_get)
+
+            # Get URL if file doesn't already exist
+            if os.path.isfile(outfile) == False:
+                print 'Getting %s ...' % url
+                urllib.urlretrieve (url, outfile)
+            else:
+                print 'File %s exists' % outfile
+            
+            # Increment counter
             n = n + 1
