@@ -19,7 +19,7 @@ In no particular order:
   * [Derek Watkins' GDAL cheat sheet](https://github.com/dwtkns/gdal-cheat-sheet)
   * [A gentle introduction to GDAL](https://medium.com/planet-stories/a-gentle-introduction-to-gdal-part-1-a3253eb96082)
   * [Making a New York Times map](https://thomasthoren.com/2016/02/28/making-a-new-york-times-map.html)
-  * [Creating a transparent hillshade](https://gis.stackexchange.com/)questions/144535/creating-transparent-hillshade/144700#144700)
+  * [Creating a transparent hillshade](https://gis.stackexchange.com/questions/144535/creating-transparent-hillshade/144700#144700)
   * [Smoothing DEM using GRASS](https://gis.stackexchange.com/questions/12833/smoothing-dem-using-grass)
   * [An R-based, colored version of this map](http://strimas.com/r/snowfall/)
   * [GDAL hillshade tutorial](https://github.com/clhenrick/gdal_hillshade_tutorial)
