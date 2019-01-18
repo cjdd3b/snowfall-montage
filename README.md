@@ -1,6 +1,6 @@
 # Hillshaded relief maps of snowfall accumulation
 
-Inspired by projects from the [Washington Post](https://www.washingtonpost.com/graphics/2018/national/snow-accumulation/?utm_term=.0f13e7b9f5a1) and [Garrett Dash Nelson](http://viewshed.matinic.us/2018/01/13/1139/), this project creates nine years of hillshaded relief maps of accumulated snowfall and displays them as a single animated GIF.
+Inspired by projects from the [Washington Post](https://www.washingtonpost.com/graphics/2018/national/snow-accumulation/?utm_term=.0f13e7b9f5a1) and [Garrett Dash Nelson](http://viewshed.matinic.us/2018/01/13/1139/), this project creates six years of hillshaded relief maps of accumulated snowfall and displays them as a single animated GIF.
 
 Data comes from the [National Weather Service](https://www.nohrsc.noaa.gov/snowfall/).
 
